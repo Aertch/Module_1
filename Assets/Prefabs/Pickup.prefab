@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8910366908378202160}
   - component: {fileID: 8581398925152002427}
   - component: {fileID: -5658502439254787821}
+  - component: {fileID: 5559535014034395311}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Pickup
@@ -146,3 +147,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5559535014034395311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106562322048129652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55a428e6f282c94c83bff42699a402f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
