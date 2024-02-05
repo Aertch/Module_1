@@ -1183,7 +1183,7 @@ MonoBehaviour:
   showPlayAreaMarker: 1
   teleportFadeTime: 0.1
   meshFadeTime: 0.2
-  arcDistance: 10
+  arcDistance: 20
   onActivateObjectTransform: {fileID: 416618}
   onDeactivateObjectTransform: {fileID: 469890}
   activateObjectTime: 0.1
