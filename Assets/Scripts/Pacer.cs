@@ -28,14 +28,14 @@ public class Pacer : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, zNew);
     }
 
-    void OnCollisionEnter(Collision other)
-    {
-        Debug.Log("in projectile");
-        if (other.gameObject.CompareTag("projectile")){
-            Debug.Log("Hit projectile");
-            GetComponent("pickupParent").GetComponent<ScoreboardManager>().AddScore();
-            // GetComponentInParent<ScoreboardManager>().AddScore();
-            gameObject.SetActive(false);
-        }
-    }
+    // void OnCollisionEnter(Collision other)
+    // {
+    //     Debug.Log("in projectile");
+    //     if (other.gameObject.CompareTag("projectile")){
+    //         Debug.Log("Hit projectile");
+    //         GetComponent("pickupParent").GetComponent<ScoreboardManager>().AddScore();
+    //         // GetComponentInParent<ScoreboardManager>().AddScore();
+    //         gameObject.SetActive(false);
+    //     }
+    // }
 }

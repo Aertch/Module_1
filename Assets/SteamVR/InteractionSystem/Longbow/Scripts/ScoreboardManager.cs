@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using TMPro;
+// using TMPro;
 using UnityEngine;
 
 public class ScoreboardManager : MonoBehaviour
 {
     // Start is called before the first frame update
     int count = 0;
-    public TextMeshProUGUI countText;
-    public GameObject winTextObject;
+    // public TextMeshProUGUI countText;
+    // public GameObject winTextObject;
     void Start()
     {
-        countText.text = "Count: 0";
-        winTextObject.SetActive(false);
+        // countText.text = "Count: 0";
+        // winTextObject.SetActive(false);
+        Debug.Log("Count: 0");
     }
 
     // Update is called once per frame
@@ -30,10 +31,11 @@ public class ScoreboardManager : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Count: " + count.ToString();
-        if(count >= 12)
-        {
-            winTextObject.SetActive(true);
-        }
+        Debug.Log("Count: " + count.ToString());
+        // countText.text = "Count: " + count.ToString();
+        // if(count >= 12)
+        // {
+        //     winTextObject.SetActive(true);
+        // }
     }
 }

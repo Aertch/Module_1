@@ -925,6 +925,7 @@ GameObject:
   - component: {fileID: 11487904}
   - component: {fileID: 6590140}
   - component: {fileID: 5410824}
+  - component: {fileID: 6060828637861360786}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: projectile
@@ -1018,6 +1019,26 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6060828637861360786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173732}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7c39ca990ed634b8edd3dcdd73ae65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glintParticle: {fileID: 19818360}
+  arrowHeadRB: {fileID: 5425834}
+  shaftRB: {fileID: 5410824}
+  targetPhysMaterial: {fileID: 13400000, guid: c509d5711dc2cc346be2763cd92383ca, type: 2}
+  fireReleaseSound: {fileID: 11479486}
+  airReleaseSound: {fileID: 11460240}
+  hitTargetSound: {fileID: 11455580}
+  hitGroundSound: {fileID: 11470766}
 --- !u!1 &183656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,7 +1579,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1611,7 +1632,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1664,7 +1685,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 0
       maxCurve:
@@ -1717,7 +1738,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 0
       maxCurve:

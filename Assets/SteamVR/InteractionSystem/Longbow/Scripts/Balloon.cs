@@ -17,8 +17,9 @@ namespace Valve.VR.InteractionSystem
 		private Hand hand;
 
 		public GameObject popPrefab;
+		public GameObject ScoreboardManager;
 
-		public float maxVelocity = 5f;
+		public float maxVelocity = 3f;
 
 		public float lifetime = 15f;
 		public bool burstOnLifetimeEnd = false;
@@ -46,21 +47,22 @@ namespace Valve.VR.InteractionSystem
 			destructTime = Time.time + lifetime + Random.value;
 			hand = GetComponentInParent<Hand>();
 			balloonRigidbody = GetComponent<Rigidbody>();
+			SetColor( BalloonColor.Random );
 		}
 
 
 		//-------------------------------------------------
 		void Update()
 		{
-			if ( ( destructTime != 0 ) && ( Time.time > destructTime ) )
-			{
-				if ( burstOnLifetimeEnd )
-				{
-					SpawnParticles( lifetimeEndParticlePrefab, lifetimeEndSound );
-				}
+			// if ( ( destructTime != 0 ) && ( Time.time > destructTime ) )
+			// {
+			// 	if ( burstOnLifetimeEnd )
+			// 	{
+			// 		SpawnParticles( lifetimeEndParticlePrefab, lifetimeEndSound );
+			// 	}
 
-				Destroy( gameObject );
-			}
+			// 	Destroy( gameObject );
+			// }
 		}
 
 
@@ -102,7 +104,7 @@ namespace Valve.VR.InteractionSystem
 			// Slow-clamp velocity
 			if ( balloonRigidbody.velocity.sqrMagnitude > maxVelocity )
 			{
-				balloonRigidbody.velocity *= 0.97f;
+				// balloonRigidbody.velocity *= 0.97f;
 			}
 		}
 
@@ -110,6 +112,9 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		private void ApplyDamage()
 		{
+			// GetComponent("ScoreboardManager");
+			// GetComponent<Scoreboard
+			ScoreboardManager.GetComponent<ScoreboardManager>().AddScore();
 			SpawnParticles( popPrefab, null );
 			Destroy( gameObject );
 		}
